@@ -1,0 +1,11 @@
+{
+  "name": "building-a-blockchain-with-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:osiic/building-a-blockchain-with-javascript.git",
+  "author": "Osi Ic <osiic.offcl@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
