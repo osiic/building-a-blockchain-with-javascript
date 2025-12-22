@@ -43,11 +43,10 @@ class Blockchain {
       const currentBlock = this.chain[i];
       const previoudBlock = this.chain[i - 1];
 
-      if (currentBlock.hash !== currentBlock.calculateHash()) {
-        return false;
-      }
-
-      if (currentBlock.previoudHash !== previoudBlock.hash) {
+      if (
+        currentBlock.hash !== currentBlock.calculateHash() ||
+        currentBlock.previoudHash !== previoudBlock.hash
+      ) {
         return false;
       }
     }
@@ -60,6 +59,6 @@ Coin.addBlock(new Block(1, "02/01/2001", "Block Two"));
 Coin.addBlock(new Block(2, "03/01/2001", "Block Three"));
 console.log(`Is this chain valid? ${Coin.isClainValid()}`);
 Coin.addBlock(new Block(3, "04/01/2001", "Block Four"));
-Coin.chain[3].data = "Block Edit"
+Coin.chain[3].data = "Block Edit";
 console.log(`Is this chain valid? ${Coin.isClainValid()}`);
 // console.log(JSON.stringify(Coin, null, 2));
